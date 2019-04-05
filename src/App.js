@@ -23,7 +23,7 @@ class App extends Component {
         <h1>React Animations</h1>
         <Transition
           in={!this.state.isModalClosed}
-          timeout={300}
+          timeout={400}
           mountOnEnter
           unmountOnExit
         >
@@ -31,7 +31,6 @@ class App extends Component {
             <Modal closed={state} closeModal={this.closeModal.bind(this)} />
           )}
         </Transition>
-
         <Backdrop closed={this.state.isModalClosed} />
         <button className="Button" onClick={this.openModal.bind(this)}>
           Open Modal
